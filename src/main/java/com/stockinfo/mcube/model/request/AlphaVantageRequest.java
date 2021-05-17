@@ -2,7 +2,9 @@ package com.stockinfo.mcube.model.request;
 
 import com.stockinfo.mcube.enums.Function;
 import com.stockinfo.mcube.enums.Interval;
+import lombok.Data;
 
+@Data
 public class AlphaVantageRequest {
 
   private Function function;
@@ -11,25 +13,6 @@ public class AlphaVantageRequest {
   private Interval interval;
   private String apiKey;
 
-  public void setApiKey(String apiKey) {
-    this.apiKey = apiKey;
-  }
-
-  public void setFunction(Function function) {
-    this.function = function;
-  }
-
-  public void setSymbol(String symbol) {
-    this.symbol = symbol;
-  }
-
-  public void setInterval(Interval interval) {
-    this.interval = interval;
-  }
-
-  public void setKeywords(String keywords) {
-    this.keywords = keywords;
-  }
   public String toString() {
     StringBuffer sb = new StringBuffer();
     if(function != null) {
