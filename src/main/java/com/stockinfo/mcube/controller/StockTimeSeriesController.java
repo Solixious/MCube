@@ -1,7 +1,7 @@
 package com.stockinfo.mcube.controller;
 
-import com.stockinfo.mcube.model.request.TimeSeriesRequest;
-import com.stockinfo.mcube.model.response.TimeSeriesResponse;
+import com.stockinfo.mcube.model.request.AlphaVantageRequest;
+import com.stockinfo.mcube.model.response.AlphaVantageResponse;
 import com.stockinfo.mcube.service.StockTimeSeriesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,47 +15,47 @@ public class StockTimeSeriesController {
   private StockTimeSeriesService stockTimeSeriesService;
 
   @PostMapping("/intra-day")
-  public TimeSeriesResponse intraDay(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse intraDay(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.intraDay(request);
   }
 
   @PostMapping("/daily")
-  public TimeSeriesResponse daily(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse daily(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.daily(request);
   }
 
   @PostMapping("/daily-adjusted")
-  public TimeSeriesResponse dailyAdjusted(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse dailyAdjusted(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.dailyAdjusted(request);
   }
 
   @PostMapping("/weekly")
-  public TimeSeriesResponse weekly(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse weekly(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.weekly(request);
   }
 
   @PostMapping("/weekly-adjusted")
-  public TimeSeriesResponse weeklyAdjusted(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse weeklyAdjusted(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.weeklyAdjusted(request);
   }
 
   @PostMapping("/monthly")
-  public TimeSeriesResponse monthly(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse monthly(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.monthly(request);
   }
 
   @PostMapping("/monthly-adjusted")
-  public TimeSeriesResponse monthlyAdjusted(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse monthlyAdjusted(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.monthlyAdjusted(request);
   }
 
   @PostMapping("/quote")
-  public TimeSeriesResponse quote(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse quote(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.quote(request);
   }
 
   @PostMapping(value = "/search")
-  public TimeSeriesResponse search(@RequestBody TimeSeriesRequest request) {
+  public AlphaVantageResponse search(@RequestBody AlphaVantageRequest request) {
     return stockTimeSeriesService.search(request);
   }
 }

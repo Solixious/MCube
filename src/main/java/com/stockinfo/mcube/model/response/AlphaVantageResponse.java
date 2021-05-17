@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import java.util.List;
 import java.util.Map;
 
-public class TimeSeriesResponse {
+public class AlphaVantageResponse {
 
   @JsonSetter("Meta Data")
   private TimeSeriesMetadata metadata;

@@ -3,7 +3,7 @@ package com.stockinfo.mcube.model.request;
 import com.stockinfo.mcube.enums.Function;
 import com.stockinfo.mcube.enums.Interval;
 
-public class TimeSeriesRequest {
+public class AlphaVantageRequest {
 
   private Function function;
   private String symbol;
